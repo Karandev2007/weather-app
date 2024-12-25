@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- loading spinner -->
+  <div id="loadingSpinner" class="flex justify-center items-center min-h-screen">
+    <div class="w-16 h-16 border-4 border-t-transparent border-blue-600 rounded-full animate-spin"></div>
+  </div>
+
+  <!-- weather card -->
+  <div id="weatherCard" class="hidden max-w-md mx-auto p-4 bg-gray-900 rounded-lg shadow-lg mt-12 mb-8 text-center" style="width: 75%;">
+    <h2 id="cityName" class="text-3xl mb-2"></h2>
+    <p id="dateInfo" class="text-sm mb-4 text-gray-400"></p>
+    <img id="weatherIcon" src="" alt="weather icon" class="mx-auto mb-4 w-20 h-20">
+    <h3 id="temperature" class="text-4xl mb-4"></h3>
+    <p id="weatherDescription" class="text-lg mb-6"></p>
+
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-3 mt-4">
+      <div class="bg-gray-700 p-3 rounded-lg text-center">
+        <p class="text-xs font-semibold">Humidity</p>
+        <p id="humidity" class="text-lg"></p>
+      </div>
+      <div class="bg-gray-700 p-3 rounded-lg text-center">
+        <p class="text-xs font-semibold">Wind Speed</p>
+        <p id="windSpeed" class="text-lg"></p>
+      </div>
+      <div class="bg-gray-700 p-3 rounded-lg text-center">
+        <p class="text-xs font-semibold">Feels Like</p>
+        <p id="feelsLike" class="text-lg"></p>
+      </div>
+      <div class="bg-gray-700 p-3 rounded-lg text-center">
+        <p class="text-xs font-semibold">Pressure</p>
+        <p id="pressure" class="text-lg"></p>
+      </div>
+      <div class="bg-gray-700 p-3 rounded-lg text-center">
+        <p class="text-xs font-semibold">UV Index</p>
+        <p id="uvIndex" class="text-lg"></p>
+      </div>
+      <div class="bg-gray-700 p-3 rounded-lg text-center">
+        <p class="text-xs font-semibold">Visibility</p>
+        <p id="visibility" class="text-lg"></p>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <button id="anotherCityBtn" class="py-2 px-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-md font-semibold transition duration-300 ease-in-out">Check Another City</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
